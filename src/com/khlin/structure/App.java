@@ -20,12 +20,23 @@ public class App {
         nodes.add(8);
         nodes.add(0);
         nodes.add(7);
+        //最大堆
+//        System.out.println(nodes);
+//        Heap<Integer> heap = new MaxHeap<Integer>(nodes, new MyComparator());
+//        heap.print();
+//        heap.insert(19);
+//        heap.print();
+//        extractManyTimes(heap, 12);
+
+        Heap<Integer> heap = new MaxHeap<>(nodes, new MyComparator());
         System.out.println(nodes);
-        Heap<Integer> heap = new MaxHeap<Integer>(nodes, new MyComparator());
-        heap.print();
-        heap.insert(19);
-        heap.print();
-        extractManyTimes(heap, 12);
+        List<Integer> sortedList = new ArrayList<>(nodes.size());
+        for (int i = nodes.size() - 1; i >= 0; i--) {
+            sortedList.add(heap.extractRoot());
+        }
+
+        System.out.println(sortedList);
+
     }
 
     private static void extractManyTimes(Heap<Integer> heap, int times) {

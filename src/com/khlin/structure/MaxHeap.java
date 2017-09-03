@@ -153,7 +153,7 @@ public class MaxHeap<M> implements Heap<M> {
     }
 
     private boolean hasLeaves(int index) {
-        return 2 * index <= nodes.size() - 1;
+        return leftChild(index) <= nodes.size() - 1;
     }
 
     private int leftChild(int index) {
