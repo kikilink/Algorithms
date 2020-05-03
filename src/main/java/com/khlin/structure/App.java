@@ -10,8 +10,6 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-//        ArrayList<Integer> nodes = generateNumbersRandomly(8);
-//        Integer[] nodes = new Integer[] {4, 3, 11, 12, 8, 0, 7};
         ArrayList<Integer> nodes = new ArrayList<>();
         nodes.add(4);
         nodes.add(3);
@@ -21,13 +19,6 @@ public class App {
         nodes.add(0);
         nodes.add(7);
         //最大堆
-//        System.out.println(nodes);
-//        Heap<Integer> heap = new MaxHeap<Integer>(nodes, new MyComparator());
-//        heap.print();
-//        heap.insert(19);
-//        heap.print();
-//        extractManyTimes(heap, 12);
-
         Heap<Integer> heap = new MaxHeap<>(nodes, new MyComparator());
         System.out.println(nodes);
         List<Integer> sortedList = new ArrayList<>(nodes.size());
